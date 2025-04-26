@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>BLISS MUN / ABOUT US ⭐</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Mobile Menu Styles */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .mobile-menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 80px;
+    }
+    
+    .mobile-menu-logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 15px 0;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu a:hover {
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .main-header {
+        display: none;
+      }
+      
+      .about-sectionn {
+        padding-top: 80px;
+      }
+
+      /* Mobile Photo Styles */
+      .mun-logoo {
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .founder-image img,
+      .profile-img,
+      .image-section11 img {
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+      }
+
+      .founder-image,
+      .profile,
+      .image-section11 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .about-leftt,
+      .about-rightt,
+      .content,
+      .text-section11 {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      .about-leftt h1 {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .section-container,
+      .container32 {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+
+      .section-container.reverse {
+        flex-direction: column-reverse;
+      }
+
+      .name {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      .socialss {
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      /* Reorder Director General section */
+      .section-container:not(.reverse) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section-container:not(.reverse) .content {
+        order: -1;
+        margin-bottom: 2rem;
+      }
+
+      .section-container:not(.reverse) .profile {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body class="about-page" style="background-color:rgb(0, 0, 0);">
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <div class="mobile-menu">
+    <div class="mobile-menu-logo">BLISS MUN</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="commitees.html">Committees</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+
+  <bgcolo></bgcolo>
+  <section class="about-sectionn">
+    <div class="about-leftt">
+      <h1>About Bliss MUN </h1>
+      <img src="logo.png" alt="Bliss MUN Logo" class="mun-logoo">
+      <div class="socialss">
+        <a href="https://x.com/BLISS_MUN"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/bliss__mun/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61575626705122"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="about-rightt">
+      <div class="menu-iconn"></div>
+      <h2>OVERVIEW<br>
+      <div class="dividerr"><span class="starr">&#10022;</span></div>
+      <p>
+        Bliss Model United Nations is a premier platform dedicated to nurturing young leaders through an immersive and engaging experience in diplomacy, international relations, and global politics. Founded with the vision of equipping delegates with comprehensive political and geopolitical knowledge, Bliss MUN brings together the best committees, an experienced and dynamic Executive Board panel, and a passionate, dedicated team committed to making this conference both educational and enjoyable. Our MUN promises not only rigorous debate and meaningful collaboration but also a fun and inspiring environment where delegates can develop their skills, build lasting connections, and ignite change. At Bliss MUN, diplomacy meets brilliance, and together we prepare the next generation of informed, responsible global citizens and future leaders.
+      </p>
+      <div class="date-boxx">
+        <span>Date: <strong>23rd - 24th August 2025</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="content">
+      <h1 class="founder-heading">FOUNDER'S<br/>MESSAGE</h1>
+      <p>
+        It gives me immense pride to address you as the founder of Bliss Model United Nations.
+
+        When I established Bliss MUN, my vision was to create a transformative platform where young minds could immerse themselves in the complexities of global affairs. Bliss MUN is more than just a conference—it is a dynamic space that provides educational, political, and geopolitical knowledge to every delegate who participates. Through rigorous debate, negotiation, and collaboration, our delegates gain firsthand experience in diplomacy and international relations, preparing themselves to be thoughtful leaders and informed global citizens.
+        
+        Our mission is to bring together aspiring diplomats from diverse backgrounds, empowering them to analyze pressing world issues, propose innovative solutions, and drive meaningful change. In an era where international cooperation is more crucial than ever, Bliss MUN stands as a testament to the power of dialogue and the belief that the next generation can shape a better, more peaceful world.
+        
+        Thank you for being a part of this journey and for your commitment to learning, understanding, and making a difference. Together, let us continue to inspire change and foster a spirit of global citizenship.     </p>
+     
+      
+<button class="btn-53" onclick="window.open('https://www.instagram.com/uditpratapsingh__/', '_blank')"> 
+  <div class="original">INSTAGRAM</div>
+  <div class="letters">
+    
+    <span>I</span>
+    <span>N</span>
+    <span>S</span>
+    <span>T</span>
+    <span>A</span>
+    <span>G</span>
+    <span>R</span>
+    <span>A</span>
+    <span>M</span>
+  </div>
+</button>
+    </div>
+    <div class="profile">
+      <img src="udit.jpg" alt="Udit Pratap Singh" class="profile-img" />
+      <div class="name">
+        <h3>Udit Pratap Singh</h3>
+        <p>Founder | Secretary General</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container">
+    <div class="profile">
+      <img src="soumya.jpg" alt="Soumya Mishra" class="profile-img" />
+      <div class="name">
+        <h3>Soumya Mishra</h3>
+        <p>Director General</p>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Director General</h1>
+      <p>
+        As Director General of Bliss Model United Nations, it is my honor to welcome you all to this unique platform of learning, debate, and diplomacy.
+
+        Bliss MUN was founded to provide delegates with deep educational, political, and geopolitical insights, and it is my responsibility to ensure that every aspect of this conference runs smoothly and effectively. My role is to oversee the organization and execution of the event, working closely with our dedicated team to create an environment where delegates can engage meaningfully, develop their skills, and collaborate to propose real solutions to global challenges.
+        
+        At Bliss MUN, we believe in the power of dialogue and the importance of bringing together passionate young diplomats. Our aim is to inspire you to think critically, negotiate respectfully, and work collectively towards positive change in the world. Every session, every debate, and every resolution here is a step towards building a more informed and proactive generation of global citizens.
+        
+        Thank you for joining us on this journey. I look forward to witnessing your ideas, your leadership, and your commitment to making a difference.
+              </p>
+              <button class="btn-53" onclick="window.open('https://www.instagram.com/words.of.soumya/', '_blank')"> 
+                <div class="original">INSTAGRAM</div>
+                <div class="letters">
+                  
+                  <span>I</span>
+                  <span>N</span>
+                  <span>S</span>
+                  <span>T</span>
+                  <span>A</span>
+                  <span>G</span>
+                  <span>R</span>
+                  <span>A</span>
+                  <span>M</span>
+                </div>
+              </button>
+    </div>
+  </section>
+
+  <div class="container32">
+    <div class="text-section11">
+      <h1>Chief Advisor</h1>
+      
+      <p>
+        As Chief Advisor of Bliss Model United Nations, I am honored to share my perspective on what makes this platform truly exceptional.
+
+        As a person with experience of Model United Nations conferences, I have witnessed firsthand the transformative power of MUNs in shaping young leaders and fostering a deep understanding of global affairs and diplomacy.
+        
+        Bliss MUN stands out as a forum where delegates not only gain critical educational, political, and geopolitical knowledge, but also develop the skills necessary to navigate complex international challenges.
+        
+        Our mission extends beyond debate and discussion. At Bliss MUN, we strive to bring together aspiring diplomats and changemakers, encouraging them to think critically, collaborate effectively, and propose actionable solutions to some of the world's most pressing issues. The diversity of perspectives and the spirit of constructive dialogue here are what drive meaningful change and inspire innovation among participants.
+        
+        I encourage every delegate to embrace this opportunity—to learn, to question, and to lead. Your engagement here is not just about winning awards, but about building the foundation for a more informed, responsible, and compassionate global community.
+        
+        Thank you for your commitment to this journey. Together, let us continue to make Bliss MUN a beacon for diplomatic excellence and a catalyst for positive change. 
+      </p>
+      <p>
+        <button class="btn-53" onclick="window.open('https://www.instagram.com/devangsingh___/', '_blank')"> 
+          <div class="original">INSTAGRAM</div>
+          <div class="letters">
+            
+            <span>I</span>
+            <span>N</span>
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>G</span>
+            <span>R</span>
+            <span>A</span>
+            <span>M</span>
+          </div>
+        </button>
+    </div>
+    <div class="image-section11">
+      <img src="devang.jpg" alt="Devang Singh">
+      <h2>Devang Singh</h2>
+      <p>Chief Advisor</p>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">BLISS MUN</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="commitees.html">Committees</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="scrollToTop" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Mobile menu functionality
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuSpans = document.querySelectorAll('.mobile-menu-toggle span');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      menuSpans[0].style.transform = mobileMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : 'none';
+      menuSpans[1].style.opacity = mobileMenu.classList.contains('active') ? '0' : '1';
+      menuSpans[2].style.transform = mobileMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.mobile-menu') && !e.target.closest('.mobile-menu-toggle') && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        menuSpans[0].style.transform = 'none';
+        menuSpans[1].style.opacity = '1';
+        menuSpans[2].style.transform = 'none';
+      }
+    });
+    
+    // Prevent scrolling when menu is open
+    mobileMenu.addEventListener('wheel', (e) => {
+      if (mobileMenu.classList.contains('active')) {
+        e.preventDefault();
+      }
+    });
+
+    // Scroll to Top functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <footer>
+    <div class="social-links">
+      <a target=blank href="https://www.instagram.com/bliss__mun/" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a target=blank href="https://x.com/BLISS_MUN" class="social-link"><i class="fab fa-x"></i></a>
+      <a target=blank href="https://www.facebook.com/profile.php?id=61575626705122" class="social-link"><i class="fab fa-facebook"></i></a>
+  </div>
+  <p class="copyright">&copy; 2025 BLISS MUN. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+ 

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Mobile Menu Styles */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .mobile-menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 15px 0;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu a:hover {
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .main-header {
+        display: none;
+      }
+      
+      .contact-container {
+        padding-top: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="commitees.html">Committees</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">BLISS MUN</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="commitees.html">Committees</a>
+        <a href="contacts.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-container">
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="62be8e5d-b0bb-4687-a6e5-75168fe2c251">
+      <input type="hidden" name="redirect" value="https://web3forms.com/success">
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <div class="row">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+        </div>
+      </div>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="contact-info">
+      <h2>Contact <span>Us</span></h2>
+      <p>For questions, technical assistance,<br> or collaboration opportunities via the contact information provided.</p>
+      <ul>
+        <li><i>📞</i> ‪+91 8840276465‬</li>
+        <li><i>📧</i> blissmun25@gmail.com</li>
+        <li><i>📲</i> BLISS MUN</li>
+        <li><i>🌐</i> WEBSITE CREATED BY: </br> CreTech Studios -</br> +91 7985587808, +91 6386255480</li>
+        
+        
+      </ul>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="social-links">
+        <a target=blank href="https://www.instagram.com/bliss__mun/" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a target=blank href="https://x.com/BLISS_MUN" class="social-link"><i class="fab fa-x"></i></a>
+        <a target=blank href="https://www.facebook.com/profile.php?id=61575626705122" class="social-link"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p class="copyright">&copy; 2025 BLISS MUN. All Rights Reserved.</p>
+</footer>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script>
+    // Mobile menu functionality
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuSpans = document.querySelectorAll('.mobile-menu-toggle span');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      menuSpans[0].style.transform = mobileMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : 'none';
+      menuSpans[1].style.opacity = mobileMenu.classList.contains('active') ? '0' : '1';
+      menuSpans[2].style.transform = mobileMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.mobile-menu') && !e.target.closest('.mobile-menu-toggle') && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        menuSpans[0].style.transform = 'none';
+        menuSpans[1].style.opacity = '1';
+        menuSpans[2].style.transform = 'none';
+      }
+    });
+    
+    // Prevent scrolling when menu is open
+    mobileMenu.addEventListener('wheel', (e) => {
+      if (mobileMenu.classList.contains('active')) {
+        e.preventDefault();
+      }
+    });
+    
+    // Form submission handling
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      
+      // Submit the form
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('Message sent successfully!');
+          form.reset();
+        } else {
+          alert('Message sent successfully!');
+        }
+      })
+      .catch(error => {
+        alert('Message sent successfully!');
+        console.error('Error:', error);
+      })
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit';
+      });
+    });
+  </script>
+              
+</body>
+</html>

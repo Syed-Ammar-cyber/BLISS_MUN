@@ -1,0 +1,270 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(Background.jpg);
+  
+}
+#bg-video {
+position: fixed;
+top: 0;
+left: 0;
+min-width: 100%;
+min-height: 100%;
+object-fit: cover
+}
+.home-page #bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-page .video-container {
+  display: block;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 60px; */
+  flex: 1;
+
+  position: relative;
+    z-index: 1;
+    color: white;
+    padding: 2rem;
+}
+
+.left h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.date {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 3px;
+}
+
+.socials {
+  font-size: 20px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.logo {
+    max-height: 350px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.navigation a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navigation a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+.socials img {
+  width: 25px;
+  margin: 0px;
+}
+.register-button {
+position: fixed;
+bottom: 90px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
+justify-content: space-between;
+border: 2px solid white;
+border-radius: 40px;
+padding: 12px 24px;
+max-width: 400px;
+width: 90%;
+background-color: transparent;
+color: white;
+font-family: Arial, sans-serif;
+font-size: 16px;
+letter-spacing: 6px;
+text-transform: uppercase;
+cursor: pointer;
+transition: all 0.3s ease;
+z-index: 2; 
+}
+
+.register-text {
+flex-grow: 1;
+text-align: center;
+}
+
+.arrow {
+font-size: 20px;
+margin-left: 10px;
+display: flex;
+align-items: center;
+}
+
+.arrow::before {
+content: "←";
+margin-right: 6px;
+}
+
+.register-button:hover {
+background-color: white;
+color: #151515;
+}   
+
+.content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex: 1;
+position: relative;
+z-index: 1;
+color: white;
+padding: 2rem;
+
+
+}
+.left h1, .subtitle, .date .socials .register-button {
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .hero-content {
+    padding: 0 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-image {
+    max-width: 400px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .primary-button {
+    padding: 0.6rem 1.8rem;
+    font-size: 12px;
+  }
+}
+
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

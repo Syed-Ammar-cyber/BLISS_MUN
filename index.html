@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>BLISS MUN ✨</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Mobile Menu Styles */
+    .mobile-menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .mobile-menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 80px;
+    }
+    
+    .mobile-menu-logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 15px 0;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+    
+    .mobile-menu a:hover {
+      transform: scale(1.1);
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      .navigation {
+        display: none;
+      }
+      
+      .content {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .left {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .right {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .left h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .date {
+        font-size: 1.1rem;
+        margin: 1rem 0;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .socials {
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .socials a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .socials img {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .logo {
+        max-height: 200px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      
+      .register-button {
+        bottom: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+        letter-spacing: 3px;
+        max-width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .register-text {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .arrow {
+        font-size: 16px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .left h1 {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+      
+      .subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      
+      .date {
+        font-size: 1rem;
+        text-align: center;
+      }
+      
+      .logo {
+        max-height: 180px;
+      }
+      
+      .socials img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .register-button {
+        bottom: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        max-width: 80%;
+      }
+      
+      .register-text {
+        font-size: 12px;
+      }
+
+      .arrow {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body class="home-page">
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <div class="mobile-menu">
+    <div class="mobile-menu-logo">BLISS MUN</div>
+    <a href="about.html">About</a>
+    <a href="commitees.html">Committees</a>
+    <a href="contacts.html">Contact</a>
+  </div>
+
+  <div class="register-button">
+    <div class="register-text">Register Soon!</div>
+    <div class="arrow"></div>
+  </div>
+  
+  <div class="video-container">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="bgvideoo.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  <div class="hero">
+    <div class="content">
+      <div class="left">
+        <h1>BLISS<br/>Model United Nations</h1>
+        <p class="subtitle">THE GLOBAL CONFERENCE FOR PASSIONATE DELIGATES.</p>
+        <p class="subtitle">🗓 Dates - 23rd - 24th August 2025</br>
+          📍 Venue - Dr. Virendra Swarup Public School, Govind Nagar, Kanpur</p>
+        <!-- <p class="date">July 5th-6th, 2025</p> -->
+        <div class="socials">
+          <a target=blank href="https://www.instagram.com/bliss__mun/"> <img src="instagram_logo.png" alt="Instagram"></a>
+          <a target=blank href="https://www.facebook.com/profile.php?id=61575626705122"> <img src="facebook_logo.png" alt="facebook"></a>
+          <a target=blank href="https://x.com/BLISS_MUN"> <img src="x_logo.png" alt="x"></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="logo.png" alt="BLISS MUN Logo" class="logo"/>
+      </div>
+    </div>
+    <nav class="navigation">
+      <a href="about.html">About</a>
+      <a href="commitees.html">Committees</a>
+      <a href="contacts.html">Contact</a>
+    </nav>
+  </div>
+
+  <script>
+    // Mobile menu functionality
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuSpans = document.querySelectorAll('.mobile-menu-toggle span');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      menuSpans[0].style.transform = mobileMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : 'none';
+      menuSpans[1].style.opacity = mobileMenu.classList.contains('active') ? '0' : '1';
+      menuSpans[2].style.transform = mobileMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : 'none';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.mobile-menu') && !e.target.closest('.mobile-menu-toggle') && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        menuSpans[0].style.transform = 'none';
+        menuSpans[1].style.opacity = '1';
+        menuSpans[2].style.transform = 'none';
+      }
+    });
+    
+    // Prevent scrolling when menu is open
+    mobileMenu.addEventListener('wheel', (e) => {
+      if (mobileMenu.classList.contains('active')) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
