@@ -16,6 +16,15 @@
       box-sizing: border-box;
     }
 
+    .star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+}
+
     body {
       font-family: 'Rubik', sans-serif;
       background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
@@ -395,7 +404,7 @@
       content: " ";
       width: 1.5rem;
       height: 2px;
-      background: rgb(160, 26, 26);
+      background: rgb(255, 255, 255);
       top: 35%;
       left: 0rem;
       position: absolute;
@@ -761,6 +770,33 @@
     </button>  
     
     <div class="resources-grid">
+      
+      <div class="resource-box">
+        <a href="comingsoon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text">Itinerary <i class="fas fa-calendar-alt"></i></span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="https://drive.google.com/file/d/1qkqWIjer3PwGoGxG9IdHmtYP1GPOdG9m/view?usp=drivesdk" class="fancy">
+          <span class="top-key"></span>
+          <span class="text">UN Charter <i class="fas fa-globe"></i></span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="comingsoon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text">Brochure <i class="fas fa-file-alt"></i></span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
       <div class="resource-box">
         <a href="comingsoon.html" class="fancy">
           <span class="top-key"></span>
@@ -788,32 +824,6 @@
         </a>
       </div>
 
-      <div class="resource-box">
-        <a href="comingsoon.html" class="fancy">
-          <span class="top-key"></span>
-          <span class="text">Itinerary <i class="fas fa-calendar-alt"></i></span>
-          <span class="bottom-key-1"></span>
-          <span class="bottom-key-2"></span>
-        </a>
-      </div>
-
-      <div class="resource-box">
-        <a href="https://drive.google.com/file/d/1qkqWIjer3PwGoGxG9IdHmtYP1GPOdG9m/view?usp=drivesdk" class="fancy">
-          <span class="top-key"></span>
-          <span class="text">UN Charter <i class="fas fa-globe"></i></span>
-          <span class="bottom-key-1"></span>
-          <span class="bottom-key-2"></span>
-        </a>
-      </div>
-
-      <div class="resource-box">
-        <a href="comingsoon.html" class="fancy">
-          <span class="top-key"></span>
-          <span class="text">Brochure <i class="fas fa-file-alt"></i></span>
-          <span class="bottom-key-1"></span>
-          <span class="bottom-key-2"></span>
-        </a>
-      </div>
     </div>
   </div>
   
@@ -892,6 +902,34 @@
         });
       });
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    // Create stars
+    function createStars() {
+        const body = document.body;
+        const numberOfStars = 100;
+
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Random position
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            
+            // Random size
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random animation delay
+            star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite`;
+            
+            body.appendChild(star);
+        }
+    }
+
+    createStars();
+}); 
   </script>
 </body>
 </html>
