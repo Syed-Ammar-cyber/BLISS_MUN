@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BLISS MUN/Resources</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>/* footer */
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 4rem 0 2rem;
+      }
+      
+      .social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: var(--card-bg);
+        color: var(--light-text);
+        font-size: 1.2rem;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+      
+      .social-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-5px);
+      }
+      
+      .copyright {
+        text-align: center;
+        color: var(--gray-text);
+        font-size: 0.9rem;
+      }
+      /*header*/
+      .main-header {
+        background-color: #0d1b1ebf;
+        backdrop-filter: blur(8px);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        box-shadow: 0 2px 10px var(--shadow-color);
+        z-index: 1000;
+      }
+      
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+      }
+      
+      .logo {
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: var(--accent-color);
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+      
+        .nav-links a {
+          color: #f5f5f5;
+          text-decoration: none;
+          font-size: 1.1rem;
+          transition: color 0.3s ease;
+        }
+      
+        .nav-links a:hover {
+          color: #00ffcc;
+        }
+      
+        /* Dropdown Styles */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+      
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      
+        .dropdown-toggle i {
+          font-size: 0.8rem;
+          transition: transform 0.3s ease;
+        }
+      
+        .dropdown:hover .dropdown-toggle i {
+          transform: rotate(180deg);
+        }
+      
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #000000;
+          min-width: 200px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+          z-index: 1;
+          border-radius: 4px;
+          padding: 0.5rem 0;
+        }
+      
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+      
+        .dropdown-content a {
+          color: #f5f5f5;
+          padding: 0.8rem 1rem;
+          text-decoration: none;
+          display: block;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+        }
+      
+        .dropdown-content a:hover {
+          background-color: #11432d;
+          color: #f5f5f5;
+        }
+      
+    
+    </style>
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">BLISS MUN</div>
+      <nav class="nav-links">
+        <a href="bliss.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <a href="commitees.html" class="dropdown-toggle">Committees <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#AIPPM">AIPPM</a>
+            <a href="#UNSC">UNSC</a>
+            <a href="#UNHRC">UNHRC</a>
+            <a href="#UNODC">UNODC</a>
+            <a href="#HCC">HCC</a>
+            <a href="#CCC">CCC</a>
+            <a href="#IP">IP</a>
+          </div>
+        </div>
+        <a href="contacts.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <style>
+    
+  </style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+      color: white;
+    }
+
+    .resources-container {
+      text-align: center;
+      margin-top: 35px;
+      padding: 60px 20px;
+    }
+
+    .uiverse {
+      --duration: 7s;
+      --easing: linear;
+      --c-color-1: rgba(255, 163, 26, 0.7);
+      --c-color-2: #1a23ff;
+      --c-color-3: #e21bda;
+  --c-color-4: rgba(255, 232, 26, 0.7);
+  --c-shadow: rgba(255, 223, 87, 0.5);
+  --c-shadow-inset-top: rgba(255, 223, 52, 0.9);
+  --c-shadow-inset-bottom: rgba(255, 250, 215, 0.8);
+  --c-radial-inner: #ffd215;
+  --c-radial-outer: #fff172;
+  --c-color: #000000;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  position: relative;
+  cursor: inherit;
+  border: none;
+  display: table;
+  border-radius: 24px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 70px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--c-color);
+  background: radial-gradient(
+    circle,
+    var(--c-radial-inner),
+    var(--c-radial-outer) 80%
+  );
+  box-shadow: 0 0 14px var(--c-shadow);
+}
+
+.uiverse:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  box-shadow:
+    inset 0 3px 12px var(--c-shadow-inset-top),
+    inset 0 -3px 4px var(--c-shadow-inset-bottom);
+}
+
+.uiverse .wrapper {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  overflow: hidden;
+  border-radius: 24px;
+  min-width: 132px;
+  padding: 12px 0;
+}
+
+.uiverse .wrapper span {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.uiverse:hover {
+  --duration: 1400ms;
+}
+
+.uiverse .wrapper .circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: blur(var(--blur, 8px));
+  background: var(--background, transparent);
+  transform: translate(var(--x, 0), var(--y, 0)) translateZ(0);
+  animation: var(--animation, none) var(--duration) var(--easing) infinite;
+}
+
+.uiverse .wrapper .circle.circle-1,
+.uiverse .wrapper .circle.circle-9,
+.uiverse .wrapper .circle.circle-10 {
+  --background: var(--c-color-4);
+}
+
+.uiverse .wrapper .circle.circle-3,
+.uiverse .wrapper .circle.circle-4 {
+  --background: var(--c-color-2);
+  --blur: 14px;
+}
+
+.uiverse .wrapper .circle.circle-5,
+.uiverse .wrapper .circle.circle-6 {
+  --background: var(--c-color-3);
+  --blur: 16px;
+}
+
+.uiverse .wrapper .circle.circle-2,
+.uiverse .wrapper .circle.circle-7,
+.uiverse .wrapper .circle.circle-8,
+.uiverse .wrapper .circle.circle-11,
+.uiverse .wrapper .circle.circle-12 {
+  --background: var(--c-color-1);
+  --blur: 12px;
+}
+
+.uiverse .wrapper .circle.circle-1 {
+  --x: 0;
+  --y: -40px;
+  --animation: circle-1;
+}
+
+.uiverse .wrapper .circle.circle-2 {
+  --x: 92px;
+  --y: 8px;
+  --animation: circle-2;
+}
+
+.uiverse .wrapper .circle.circle-3 {
+  --x: -12px;
+  --y: -12px;
+  --animation: circle-3;
+}
+
+.uiverse .wrapper .circle.circle-4 {
+  --x: 80px;
+  --y: -12px;
+  --animation: circle-4;
+}
+
+.uiverse .wrapper .circle.circle-5 {
+  --x: 12px;
+  --y: -4px;
+  --animation: circle-5;
+}
+
+.uiverse .wrapper .circle.circle-6 {
+  --x: 56px;
+  --y: 16px;
+  --animation: circle-6;
+}
+
+.uiverse .wrapper .circle.circle-7 {
+  --x: 8px;
+  --y: 28px;
+  --animation: circle-7;
+}
+
+.uiverse .wrapper .circle.circle-8 {
+  --x: 28px;
+  --y: -4px;
+  --animation: circle-8;
+}
+
+.uiverse .wrapper .circle.circle-9 {
+  --x: 20px;
+  --y: -12px;
+  --animation: circle-9;
+}
+
+.uiverse .wrapper .circle.circle-10 {
+  --x: 64px;
+  --y: 16px;
+  --animation: circle-10;
+}
+
+.uiverse .wrapper .circle.circle-11 {
+  --x: 4px;
+  --y: 4px;
+  --animation: circle-11;
+}
+
+.uiverse .wrapper .circle.circle-12 {
+  --blur: 14px;
+  --x: 52px;
+  --y: 4px;
+  --animation: circle-12;
+}
+
+@keyframes circle-1 {
+  33% {
+    transform: translate(0px, 16px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(12px, 64px) translateZ(0);
+  }
+}
+
+@keyframes circle-2 {
+  33% {
+    transform: translate(80px, -10px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(72px, -48px) translateZ(0);
+  }
+}
+
+@keyframes circle-3 {
+  33% {
+    transform: translate(20px, 12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(12px, 4px) translateZ(0);
+  }
+}
+
+@keyframes circle-4 {
+  33% {
+    transform: translate(76px, -12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(112px, -8px) translateZ(0);
+  }
+}
+
+@keyframes circle-5 {
+  33% {
+    transform: translate(84px, 28px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(40px, -32px) translateZ(0);
+  }
+}
+
+@keyframes circle-6 {
+  33% {
+    transform: translate(28px, -16px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(76px, -56px) translateZ(0);
+  }
+}
+
+@keyframes circle-7 {
+  33% {
+    transform: translate(8px, 28px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(20px, -60px) translateZ(0);
+  }
+}
+
+@keyframes circle-8 {
+  33% {
+    transform: translate(32px, -4px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(56px, -20px) translateZ(0);
+  }
+}
+
+@keyframes circle-9 {
+  33% {
+    transform: translate(20px, -12px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(80px, -8px) translateZ(0);
+  }
+}
+
+@keyframes circle-10 {
+  33% {
+    transform: translate(68px, 20px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(100px, 28px) translateZ(0);
+  }
+}
+
+@keyframes circle-11 {
+  33% {
+    transform: translate(4px, 4px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(68px, 20px) translateZ(0);
+  }
+}
+
+@keyframes circle-12 {
+  33% {
+    transform: translate(56px, 0px) translateZ(0);
+  }
+
+  66% {
+    transform: translate(60px, -32px) translateZ(0);
+  }
+}
+
+    .resources-title {
+      font-size: 3rem;
+      color: black;
+      background: #ecc55a;
+      padding: 20px 40px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 40px;
+      font-family: 'Tinos', serif;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .resource-box {
+      background: #000000;
+      border: 1px solid #333;
+      border-radius: 15px;
+      height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .resource-box:nth-child(1) { animation-delay: 0.1s; }
+    .resource-box:nth-child(2) { animation-delay: 0.2s; }
+    .resource-box:nth-child(3) { animation-delay: 0.3s; }
+    .resource-box:nth-child(4) { animation-delay: 0.4s; }
+    .resource-box:nth-child(5) { animation-delay: 0.5s; }
+    .resource-box:nth-child(6) { animation-delay: 0.6s; }
+    .resource-box:nth-child(7) { animation-delay: 0.7s; }
+    .resource-box:nth-child(8) { animation-delay: 0.8s; }
+    .resource-box:nth-child(9) { animation-delay: 0.9s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Fancy Button Styling - transparent background version */
+    .fancy {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 0;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 1em 1.5em;
+      position: relative;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .fancy::before {
+      content: " ";
+      width: 1.5rem;
+      height: 2px;
+      background: white;
+      top: 50%;
+      left: 1em;
+      position: absolute;
+      transform: translateY(-50%);
+      transition: background 0.3s linear, width 0.3s linear;
+    }
+
+    .fancy .text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1em;
+      color: white;
+    }
+
+    .fancy .top-key,
+    .fancy .bottom-key-1,
+    .fancy .bottom-key-2 {
+      position: absolute;
+      height: 2px;
+      background: #e8e8e8;
+      transition: width 0.5s ease-out;
+    }
+
+    .fancy .top-key {
+      width: 1.5rem;
+      top: -2px;
+      left: 0.625rem;
+    }
+
+    .fancy .bottom-key-1 {
+      width: 1.5rem;
+      bottom: -2px;
+      right: 1.875rem;
+    }
+
+    .fancy .bottom-key-2 {
+      width: 0.625rem;
+      bottom: -2px;
+      right: 0.625rem;
+    }
+
+    .fancy:hover {
+      background: white;
+      color: black;
+    }
+
+    .fancy:hover::before {
+      width: 0.9375rem;
+      background: black;
+    }
+
+    .fancy:hover .text {
+      color: black;
+    }
+
+    .fancy:hover .top-key,
+    .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+      width: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="resources-container"> 
+<button class="uiverse">
+    <div class="wrapper">
+      <span>Resources</span>
+      <div class="circle circle-12"></div>
+      <div class="circle circle-11"></div>
+      <div class="circle circle-10"></div>
+      <div class="circle circle-9"></div>
+      <div class="circle circle-8"></div>
+      <div class="circle circle-7"></div>
+      <div class="circle circle-6"></div>
+      <div class="circle circle-5"></div>
+      <div class="circle circle-4"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-1"></div>
+    </div>
+  </button>  
+    <div class="resources-grid">
+
+      <div class="resource-box">
+        <a href="https://docs.google.com/spreadsheets/d/1MSKGdmSTmTIhOea81HuPrwAE45fV4nH1fqxxcM1tjC0/edit?usp=sharing" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-eye"></i>Public Eye Matrix</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-calendar-alt"></i>Itinerary</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-book"></i>Conference Guideline</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="https://www.indiacode.nic.in/bitstream/123456789/15240/1/constitution_of_india.pdf" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-gavel"></i>Indian Constitution</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="https://treaties.un.org/doc/publication/ctc/uncharter.pdf" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-globe"></i>UN Charter</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-file-alt"></i>Background Guide</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-newspaper"></i>Newsletter Day 1</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-newspaper"></i>Newsletter Day 2</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <div class="resource-box">
+        <a href="coming_soon.html" class="fancy">
+          <span class="top-key"></span>
+          <span class="text"><i class="fas fa-newspaper"></i>Newsletter Day 3</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="social-links">
+      <a target=blank href="https://www.instagram.com/bliss__mun/" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a target=blank href="https://x.com/BLISS_MUN" class="social-link"><i class="fab fa-x"></i></a>
+      <a target=blank href="https://www.facebook.com/profile.php?id=10008800000000000" class="social-link"><i class="fab fa-facebook"></i></a>
+  </div>
+  <p class="copyright">&copy; 2025 BLISS MUN. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
