@@ -2,10 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
   overflow-x: hidden;
-  box-sizing: border-box;
 }
 
 /* Video Background */
@@ -33,13 +31,12 @@ body, html {
 
 /* Main Layout */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  overflow: hidden;
 }
 
 .content {
@@ -50,7 +47,7 @@ body, html {
   position: relative;
   z-index: 1;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -122,8 +119,6 @@ body, html {
   gap: 40px;
   padding: 20px;
   flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
   z-index: 10;
 }
 
@@ -156,11 +151,11 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
   width: 100%;
   z-index: 5;
-  margin: 2rem 0;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 }
 
 .register-button {
@@ -212,14 +207,13 @@ body, html {
 .mobile-menu-toggle {
   display: none;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
 }
 
 .mobile-menu-toggle span {
@@ -344,15 +338,10 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin: 1rem 0;
-    padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
   }
   
   .register-button {
-    width: 100%;
-    max-width: 250px;
+    width: 250px;
     padding: 10px 20px;
     font-size: 0.9rem;
   }
@@ -360,69 +349,38 @@ body, html {
   .logo {
     max-height: 180px;
   }
-  
-  .hero {
-    min-height: 100vh;
-    height: auto;
-    padding-bottom: 2rem;
-  }
-  
-  .content {
-    flex: none;
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .left {
-    width: 100%;
-    padding: 0;
-  }
 }
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .left h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   .subtitle {
-    font-size: 0.8rem;
-    margin: 10px 0;
+    font-size: 0.9rem;
   }
   
   .date {
-    font-size: 0.75rem;
-    margin: 10px 0;
+    font-size: 0.8rem;
   }
   
   .register-button {
-    width: 100%;
-    max-width: 220px;
+    width: 220px;
     padding: 8px 16px;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
   }
   
   .logo {
-    max-height: 120px;
-  }
-  
-  .socials {
-    gap: 15px;
-    margin-top: 0.8rem;
+    max-height: 150px;
   }
   
   .socials img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
   
   .content {
-    padding: 0.5rem;
-  }
-  
-  .hero {
-    padding-top: 2rem;
+    padding: 1rem;
   }
 }
