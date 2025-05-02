@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="thankyou.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="checkmark"></div>
+            <h1>
+                <span>T</span>
+                <span>h</span>
+                <span>a</span>
+                <span>n</span>
+                <span>k</span>
+                <span> </span>
+                <span>Y</span>
+                <span>o</span>
+                <span>u</span>
+                <span>!</span>
+            </h1>
+            <p>You have successfully registered for BLISS MUN 2025.</p>
+            <button id="returnHome" class="return-button"><span>Return to Registration</span></button>
+        </div>
+    </div>
+    <script src="thankyou.js"></script>
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        const starCount = 200;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Random size between 1 and 3 pixels
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random position
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            
+            // Random animation duration between 2 and 5 seconds
+            const duration = Math.random() * 3 + 2;
+            star.style.setProperty('--duration', `${duration}s`);
+            
+            // Random delay for animation
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            
+            starsContainer.appendChild(star);
+        }
+
+        // Add click event listener for the return button
+        document.getElementById('returnHome').addEventListener('click', function() {
+            window.location.href = 'registration.html';
+        });
+    </script>
+</body>
+</html> 
