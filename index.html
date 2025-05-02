@@ -7,205 +7,6 @@
   <title>BLISS MUN</title>
   <link rel="stylesheet" href="index.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    /* Mobile Menu Styles */
-    .mobile-menu-toggle {
-      display: none;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-    }
-    
-    .mobile-menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 5px 0;
-      transition: 0.3s;
-    }
-    
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 999;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .mobile-menu.active {
-      display: flex;
-    }
-    
-    .mobile-menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
-      margin: 15px 0;
-      padding: 10px 20px;
-      transition: 0.3s;
-    }
-    
-    .mobile-menu a:hover {
-      transform: scale(1.1);
-    }
-    
-    @media (max-width: 768px) {
-      .mobile-menu-toggle {
-        display: block;
-      }
-      
-      .navigation {
-        display: none;
-      }
-      
-      .content {
-        padding: 1rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .left {
-        order: 2;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      
-      .right {
-        order: 1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .left h1 {
-        font-size: 2.8rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        text-align: center;
-        width: 100%;
-      }
-      
-      .subtitle {
-        font-size: 1.2rem;
-        margin: 1rem 0;
-        text-align: center;
-        width: 100%;
-      }
-      
-      .date {
-        font-size: 1.1rem;
-        margin: 1rem 0;
-        text-align: center;
-        width: 100%;
-      }
-      
-      .socials {
-        justify-content: center;
-        gap: 2rem;
-        margin: 2rem 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-      }
-      
-      .socials a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .socials img {
-        width: 35px;
-        height: 35px;
-      }
-      
-      .logo {
-        max-height: 200px;
-        width: auto;
-        display: block;
-      }
-      
-      .register-button {
-        bottom: 80px;
-        padding: 10px 15px;
-        font-size: 16px;
-        letter-spacing: 4px;
-        max-width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .register-button2 {
-        bottom: 10px;
-        padding: 10px 15px;
-        font-size: 16px;
-        letter-spacing: 4px;
-        max-width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-      .register-text {
-        font-size: 16px;
-        text-align: center;
-        width: 100%;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .left h1 {
-        font-size: 2.4rem;
-        text-align: center;
-      }
-      
-      .subtitle {
-        font-size: 1.1rem;
-        text-align: center;
-      }
-      
-      .date {
-        font-size: 1rem;
-        text-align: center;
-      }
-      
-      .logo {
-        max-height: 180px;
-      }
-      
-      .socials img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  </style>
 </head>
 <body class="home-page">
   <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -221,14 +22,6 @@
     <a href="resources.html">Resources</a>
   </div>
 
-  <div class="register-button" onclick="window.open('registration.html', '_blank')">
-    <div class="register-text">Individual Registration!</div>
-    <div class="arrow"></div>
-  </div>
-    <div class="register-button2" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSczzRGQUkyiOgZ4pKw9YA73267p_5FXSgMULqhORjT1hoKPQw/viewform', '_blank')">
-    <div class="arrow2"></div>
-    <div class="register-text">School Registration!</div>
-  </div>
   <div class="video-container">
     <video autoplay muted loop playsinline id="bg-video">
       <source src="bgvideoo.mp4" type="video/mp4">
@@ -239,19 +32,31 @@
     <div class="content">
       <div class="left">
         <h1>BLISS<br/>Model United Nations</h1>
-        <p class="subtitle">THE GLOBAL CONFERENCE FOR PASSIONATE DELIGATES.</p>
-        <p class="subtitle">🗓 Dates - 23rd - 24th August 2025</br>
+        <p class="subtitle">THE GLOBAL CONFERENCE FOR PASSIONATE DELEGATES.</p>
+        <p class="date">🗓 Dates - 23rd - 24th August 2025</br>
           📍 Venue - Dr. Virendra Swarup Public School, Govind Nagar, Kanpur</p>
         <div class="socials">
-          <a target=blank href="https://www.instagram.com/bliss_mun/"> <img src="instagram_logo.png" alt="Instagram"></a>
-          <a target=blank href="https://www.facebook.com/bliss_mun/"> <img src="facebook_logo.png" alt="facebook"></a>
-          <a target=blank href="https://www.x.com/bliss_mun/"> <img src="x_logo.png" alt="x"></a>
+          <a target="_blank" href="https://www.instagram.com/bliss__mun/"><img src="instagram_logo.png" alt="Instagram"></a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=61575626705122"><img src="facebook_logo.png" alt="Facebook"></a>
+          <a target="_blank" href="https://www.x.com/bliss_mun/"><img src="x_logo.png" alt="X"></a>
         </div>
       </div>
       <div class="right">
         <img src="logo.png" alt="BLISS MUN Logo" class="logo"/>
       </div>
     </div>
+    
+    <div class="buttons-container">
+      <div class="register-button" onclick="window.open('registration.html', '_blank')">
+        <div class="register-text">Individual Registration</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="register-button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSczzRGQUkyiOgZ4pKw9YA73267p_5FXSgMULqhORjT1hoKPQw/viewform', '_blank')">
+        <div class="register-text">School Registration</div>
+        <div class="arrow2"></div>
+      </div>
+    </div>
+    
     <nav class="navigation">
       <a href="about.html">About</a>
       <a href="commitees.html">Committees</a>
@@ -280,13 +85,6 @@
         menuSpans[0].style.transform = 'none';
         menuSpans[1].style.opacity = '1';
         menuSpans[2].style.transform = 'none';
-      }
-    });
-    
-    // Prevent scrolling when menu is open
-    mobileMenu.addEventListener('wheel', (e) => {
-      if (mobileMenu.classList.contains('active')) {
-        e.preventDefault();
       }
     });
   </script>
