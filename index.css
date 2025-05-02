@@ -186,10 +186,8 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 .arrow, .arrow2 {
   font-size: 1.25rem;
   display: flex;
+  rotate: 180deg;
   align-items: center;
-}
-.arrow {
-rotate: 180deg;
 }
 .arrow::before {
   content: "←";
